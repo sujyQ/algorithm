@@ -1,4 +1,4 @@
-from collections import dequeue
+from collections import deque
 
 ##########################################
 # BFS : Breadth First Search
@@ -8,7 +8,7 @@ from collections import dequeue
 ##########################################
 def bfs(graph, start, visited) :
     # use deque library for queue
-    queue = dequeue([start])
+    queue = deque([start])
     # check that start node is visited
     visited[start] = True
     # repeat untill queue is empty
@@ -18,7 +18,7 @@ def bfs(graph, start, visited) :
         print(v, end=' ')
         # push all of its not-yet visited adjacency nodes
         for i in graph[v] :
-            if not visited :
+            if not visited[i] :
                 queue.append(i)
                 visited[i] = True
 
@@ -36,4 +36,4 @@ graph = [
 
 visited = [False] * 9
 
-bfs(graph=graph, v=1, visited=visited)  # 1 2 3 8 7 4 5 6
+bfs(graph=graph, start=1, visited=visited)  # 1 2 3 8 7 4 5 6
