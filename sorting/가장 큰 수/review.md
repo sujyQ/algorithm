@@ -33,9 +33,10 @@
         - `lambda`를 쓰는 것과 비슷
         - 두 개의 인수를 입력받아 첫 번째 인수가 더 크면 양수, 같으면 0, 더 작으면 음수를 반환
     
+    
 * 참고 사이트 
-- [sorting HOWTO] (https://docs.python.org/ko/3/howto/sorting.html#sortinghowto)
-- [functools] (https://docs.python.org/ko/3/library/functools.html)
+    - [sorting HOWTO](https://docs.python.org/ko/3/howto/sorting.html#sortinghowto).
+    - [functools](https://docs.python.org/ko/3/library/functools.html).
 
 
 ------
@@ -53,5 +54,7 @@ def comparator(a, b)
     else :
         return -1
 
-_sorted = sorted(target, ket=functools.com_to_key(comparator))
+def solution(target) :
+    _sorted = sorted(target, ket=functools.com_to_key(comparator))
+    ...
 ~~~
